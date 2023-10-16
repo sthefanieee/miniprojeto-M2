@@ -5,11 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doll Pretty</title>
     <link rel="stylesheet" href="/style/style.css">
-
 </head>
 <body>
-    <header class="logo-tipo">
-        <img src="src/img/logotipo.png" alt="logo-tipo">
+    <header class="container">
+          <div class="logo-tipo"><img src="/src/img/logotipo.png" width="150%" alt="logotipo"></div>
+          <div class="title1"><h1>Meu Diário Secreto!</h1></div>
     </header>
+    <header class="container-text">
+          <div class="diarytext">
+            <div class="text"><h2>"Querido Diário...</h2></div>
+            <textarea id="myDiary" name="secrets" placeholder="Digite aqui." rows="15" cols="80">
+                Digite aqui.
+            </textarea>
+          <div class="options">
+            <button type="button" onclick="saveNote()">Salvar</button>
+            <button type="button" onclick="editNote()">Editar</button>
+            <button type="button" onclick="deleteNote()">Excluir</button>
+            <button type="button" onclick="displayNotes()">Exibir Anotações</button>
+          </div>
+          </div>
+          
+          <div class="diary1">
+          </div>
+    </header>
+           <header class="container-diary">
+
+           </header>
+<script src="/script.js"></script>
 </body>
 </html>
