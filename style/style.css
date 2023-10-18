@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Poppins:wght@300;400;500&display=swap');
 
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: 'Poppins', sans-serif;
+}
+
+
+.main-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
     display: flex;
+    width: 100%;
 }
 
 .container {
@@ -39,8 +47,8 @@ header {
 .container-text {
     display: flex;
     margin: 6rem;
-    width: 48%;
     height: 48%;
+    width: 800px;
     padding-bottom: 10%;
     flex-direction: column;
     border-radius: 12px;
@@ -49,12 +57,16 @@ header {
 }
 
 textarea {
-    resize: horizontal;
+    resize: vertical;
     color: #838383;
     border-style: double;
 }
 
-.text {
+textarea::placeholder{
+    text-align: center;
+}
+
+.subtitle1 {
     color: white;
 }
 
@@ -71,18 +83,25 @@ button {
     margin: 0 15px;
 }
 
-.text, textarea, .options {
+.textarea-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.subtitle1, textarea, .options {
+    display: flex;
+    justify-content: center;
     padding: 1rem 0;
 }
 
 .container-diary {
     display: flex;
-    margin: 6rem;
-    width: 48%;
-    height: 48%;
-    padding-bottom: 10%;
+    margin: 2rem;
+    width: 800px;
+    height: 521px;
+    padding: 80px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -91,8 +110,83 @@ button {
     background-color: rgb(255, 179, 205);
 }
 
+.subtitle2 {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.table-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 200px;
+    background-color: #ffffff;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.table-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: white;
+}
+
+.table {
+    table-layout: fixed;
+    width: 600px;
+    height: 60px;
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: #ffc7e7;
+
+}
+
+th, td {
+    border: 1px solid rgb(255, 92, 182);
+    color: #ff7db8;
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+td{
+    word-wrap: break-word;
+}
+
 @media screen and (max-width: 768px) {
     .container-text  {
         width: 80%;
     }
+    button{
+        margin: 0;
+        font-size: 13px;
+    }
+    textarea{
+        width: 90%;
+    }
+
+    
+    .container-diary {
+ 
+    width: 283px;
+    height: 496px;
+    padding: 3px;
+  
+
+}
+
+    .table{
+        width: 260px;
+        
+        overflow: auto;
+    }
+
 }
