@@ -151,7 +151,7 @@ button {
 th, td {
     border: 1px solid rgb(255, 92, 182);
     color: #ff7db8;
-    background-color: #ffffff;
+    background-color: white;
     padding: 15px;
     text-align: left;
     font-size: 14px;
